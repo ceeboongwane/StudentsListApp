@@ -1,0 +1,73 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content class="img">
+
+
+<h1>Your List</h1>
+
+
+
+    <ion-fab right bottom>
+    
+        <button class="add" ion-fab  (click)=ADD()><ion-icon name="add" (click)=ADD()></ion-icon></button>
+      
+    </ion-fab>
+
+
+  
+
+    <ion-list  *ngFor="let a of Kiso; let i = index"   class="list"  >
+
+
+    <ion-item-sliding  class="list" >
+         <ion-item  class="list" >
+      
+
+                
+                 <h3>Name      :  {{a.Name}}</h3>
+                 <h3>Surname      :  {{a.Surname}}</h3>   
+                 <h3>Student Number  :  {{a.StudentNumber}}</h3>
+                 <ion-icon name="arrow-dropleft" item-end></ion-icon> 
+
+          </ion-item>
+
+
+              <ion-item-options  side="right"  class="list">
+
+                    <button class="more"  ion-button color="primary" (click)="More(i)">
+                           
+                    <ion-icon name="more"></ion-icon>
+                            More
+                     </button>
+
+
+                <button class="Update" ion-button color="primary" (click)="View(i)">
+                  <ion-icon name="hammar" ></ion-icon>
+                  Update
+                </button>
+
+
+                <button class="Delete" ion-button color="secondary" (click)="Delete(i)">
+                  <ion-icon name="trash"></ion-icon>
+                  Delete
+                </button>
+              </ion-item-options>
+             
+            
+
+
+            </ion-item-sliding>
+          </ion-list>
+
+<!-- {{Name}} {{Surname}}  {{StudentNumber}} -->
+ 
+
+
+</ion-content>
